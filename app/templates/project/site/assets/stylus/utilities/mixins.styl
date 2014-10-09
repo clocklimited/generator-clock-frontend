@@ -1,0 +1,22 @@
+rem($val)
+  if $is-ie
+    ($val)px
+  else
+    ( round($val / $base--font-size, 3))rem
+
+underline($width, $offset)
+  position relative
+  margin-bottom (@margin-bottom + rem($offset))
+
+  &:after
+    border-bottom 3px solid $color--aqua
+    content ''
+    left 50%
+    margin-left -($width / 2)px
+    margin-top rem($offset)
+    position absolute
+    top 100%
+    width ($width)px
+
+  a
+    text-decoration none

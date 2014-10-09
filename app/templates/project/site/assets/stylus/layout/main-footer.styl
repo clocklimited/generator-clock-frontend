@@ -1,0 +1,41 @@
+//
+// MAIN FOOTER
+// ===========
+//
+
+.main-footer
+  text-align center
+  background-color $color--blue
+  color $color--white
+
+  h2
+    color inherit
+
+  p
+    margin-bottom rem(30)
+
+  a
+    color $color--white
+    &:hover
+    &:focus
+      color $color--aqua
+      text-decoration underline
+
+  .btn
+    margin-bottom rem(20)
+
+    &:hover
+    &:focus
+      text-decoration none
+      color $color--teal
+
+.main-footer__contact
+  margin-bottom rem(50)
+  +width-min($mq--desktop)
+    margin-bottom 0
+
+.main-footer__copyright
+  font-size rem(13)
+  padding-top rem(30)
+  p + p
+    margin-top rem(20)

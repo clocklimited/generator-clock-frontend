@@ -1,0 +1,14 @@
+//-
+//- MAIN HEADER
+//- ===========
+//-
+
+header.main-header(role='banner')
+  .main-header__container.container
+
+    a.site-title(href='/') #{config.projectTitle}
+    button.text-btn.btn--nav.js-toggle-nav
+      i.icon.icon--nav
+        span.vhidden Navigation
+
+    include main-navigation

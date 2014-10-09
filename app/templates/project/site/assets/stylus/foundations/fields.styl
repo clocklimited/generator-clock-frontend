@@ -1,0 +1,80 @@
+//
+// FIELDS
+// ======
+// These lay out controls, labels and additional elements within the context
+// of a form
+//
+
+
+.field
+  margin-bottom rem(15)
+
+.field__question
+  display block
+  margin-bottom rem(5)
+
+  abbr
+    border-bottom 0
+    margin-left rem(4)
+
+.field__feedback
+  margin-top rem(6px)
+
+  .field--error &
+    color $color--error
+
+.field--actions
+  padding-top rem(40)
+
+
+
+.field--attachment
+  display none
+  .fileinput &
+    display block
+
+.btn-file
+  position relative
+  overflow hidden !important
+  padding rem(7)
+  line-height 24px
+  display block
+  width auto
+  min-width 0
+  border 1px solid $color--teal
+  color $color--blue
+  text-align center
+  text-decoration none
+  cursor pointer
+  transition all 0.4s ease-out
+  &:focus
+  &:hover
+    transition-duration 0.1s
+
+  .field--error &
+    border-color $color--error
+
+  input[type=file]
+    position absolute
+    top 0
+    right 0
+    min-width 100%
+    min-height 100%
+    font-size 100px
+    text-align right
+    opacity 0
+    outline none
+    background $color--white
+    cursor inherit
+    display block
+
+.control--file-helper
+  border-left 0
+  color $color--teal
+
+.field--message
+  .control--multilined
+    height rem(121)
+
+    .no-fileinput &
+      height rem(202)

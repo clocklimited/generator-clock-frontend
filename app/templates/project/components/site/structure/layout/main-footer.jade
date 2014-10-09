@@ -1,0 +1,41 @@
+//-
+//- MAIN FOOTER
+//- ===========
+//-
+
+- var year = (new Date()).getFullYear()
+
+footer.main-footer.section(role='contentinfo')
+  .container
+    .grid
+      .grid__item.desktop-one-half
+        .main-footer__contact
+          h2.section__title Contact Us
+          p
+            strong Clock Limited
+          p Registered Office:
+            br
+            | 3rd Floor, Southside,105 Victoria Street, London SW1E 6QT
+
+          p Telephone: 
+            a(href='tel:555555555') +44 (0) 555 555 5555
+            br
+            | Email: 
+            a(href='mailto:hello@clock.co.uk') hello@clock.co.uk
+
+      .grid__item.desktop-one-half
+        .main-footer__contact
+          h2.section__title More Navigation
+          p
+            a.btn(href='/') Footer Nav 1
+            br
+            a.btn(href='/') Footer Nav 2
+            br
+            a.btn(href='/') Footer Nav 3
+
+
+    .main-footer__copyright
+      p Copyright &copy;#{year} Clock Limited. All&nbsp;Rights&nbsp;Reserved. 
+        a(href='/terms-and-conditions') Legal&nbsp;Terms&nbsp;and&nbsp;Conditions
+      p
+        a(href='http://clock.co.uk/') Website by Clock

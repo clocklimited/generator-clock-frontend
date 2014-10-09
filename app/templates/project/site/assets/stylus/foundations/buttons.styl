@@ -1,0 +1,94 @@
+//
+// BUTTONS
+// =======
+//
+
+
+// Firefox specific reset to better match other browsers.
+button.btn::-moz-focus-inner
+  border none
+  padding 0
+
+
+//
+// BASE STYLES
+// Base styles to persuade `<a>`, `<button>` and `<input>` elements to look the
+// same as each other, across various browsers.
+//
+
+.btn
+  display inline-block
+  border none
+  vertical-align middle
+  cursor pointer
+  overflow visible // removes padding in IE
+
+  // Presentational Styles
+  background transparent
+  border 3px solid $color--aqua
+  color inherit
+  font-family inherit
+  font-size rem(15)
+  font-weight bold
+  line-height 1
+  min-width rem(250)
+  padding rem(11) rem(10) rem(12)
+  text-align center
+  text-decoration none
+  text-transform uppercase
+  transition all 0.4s ease-out
+
+  +width-min($mq--tablet)
+    font-size rem(16)
+    min-width rem(340)
+
+  &:focus
+  &:hover
+    background $color--aqua
+    color $color--teal
+    text-decoration none
+    transition-duration 0.1s
+
+  &:active
+    text-decoration none
+
+
+//
+// BUTTON MODIFIERS
+// Remember to add button variation modifier examples to the style guide page.
+//
+
+.btn--primary
+  border-color $color--blue
+  color $color--teal
+
+  &:focus,
+  &:hover
+    background $color--blue
+    color $color--white
+
+//
+// BUTTON GROUP
+// Contains multiple buttons and adds spacing between them.
+//
+
+.btn-group
+  .btn + .btn
+    margin-left 0.5em
+
+
+//
+// UNSTYLED BUTTON
+// Simple reset to make button elements look more like text links.
+//
+
+.text-btn
+  padding 0
+  margin 0
+  border none
+  background none
+  font inherit
+  @extend a
+
+  &:focus
+    outline none

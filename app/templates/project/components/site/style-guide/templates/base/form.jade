@@ -1,0 +1,141 @@
+extend ../../../structure/default
+
+block page-header
+
+  h1.section__title Form Elements
+
+block content
+  .section
+    .container
+      .prose
+
+        .prose__section
+          h2 Notifications
+
+          .notification.notification--success
+            strong Thanks
+            p You have successfully submitted the form
+
+        .prose__section
+          h2 Standard Input Template
+          p A single text input, select, or textarea.
+          form(action='', method='post')
+
+            .field
+              .field__question
+                label(for='control--title') Add a title
+              .field__answer
+                input.control.control--text(id='control--title', type='text', name='title')
+
+            .field
+              .field__question
+                label(for='control--country')
+                  | Please select a country
+                  abbr(title='This field is required') *
+              .field__answer
+                select.control.control--choice(id='control--country', name='country')
+                  option(value='GBR') United Kingdom
+                  option(value='AFG') Afghanistan
+                  option(value='ALB') Albania
+                  option(value='DZA') Algeria
+                  option(value='ASM') American Samoa
+                  option(value='AND') Andorra
+                  option(value='AGO') Angola
+
+            .field.field--attachment
+              .field__question
+                label(for='control--attachmant') Attachment
+              .field__answer
+                .grid.grid--gutterless
+                  .grid__item.one-third
+                    span.text-btn.btn--primary.btn-file
+                      | Browse
+                      input.control.control--text(id='control--attachmant', type='file', name='attachmant')
+                  .grid__item.two-thirds
+                    input.control.control--text.control--file-helper(type='text', readonly, disabled)
+
+            .field
+              .field__question
+                label(for='control--message') Message
+              .field__answer
+                textarea.control.control--text.control--multilined(id='control--message', rows='4', name='message')
+
+        .prose__section
+          h2 Boolean Template
+          p A single checkbox input.
+          form(action='', method='post')
+            #field-terms.field(data-field='terms')
+              .field__answer
+                label
+                  input.control.control--boolean(type='checkbox', name='tandc', value='agreed', checked='checked')
+                  span I agree to the terms and conditions
+
+        .prose__section
+          h2 Boolean Group Template
+          p A collection of radio or checkbox inputs.
+
+          form(action='', method='post')
+            #field-colour.field(data-field='colour')
+              .field__question
+                span Choose your favourite colour
+                abbr(title='This field is required') *
+              .field__answer
+                ul.list--unstyled
+                  li
+                    label
+                      input.control.control--boolean(type='checkbox', name='color', value='#f00')
+                      span Red
+
+                  li
+                    label
+                      input.control.control--boolean(type='checkbox', name='color', value='#0f0', checked='checked')
+                      span Green
+                  li
+                    label
+                      input.control.control--boolean(type='checkbox', name='color', value='#00f')
+                      span Blue
+                  li
+                    label
+                      input.control.control--boolean(type='checkbox', name='color', value='#000', disabled)
+                      span Black
+                  li
+                    label
+                      input.control.control--boolean(type='checkbox', name='color', value='#336699', disabled, checked)
+                      span Purple
+
+          form(action='', method='post')
+            #field-colour.field(data-field='colour')
+              .field__question
+                span Choose your favourite colour
+                abbr(title='This field is required') *
+              .field__answer
+                ul.list--unstyled
+                  li
+                    label
+                      input.control.control--boolean(type='radio', name='color', value='#f00')
+                      span Red
+                  li
+                    label
+                      input.control.control--boolean(type='radio', name='color', value='#0f0', checked='checked')
+                      span Green
+                  li
+                    label
+                      input.control.control--boolean(type='radio', name='color', value='#00f')
+                      span Blue
+                  li
+                    label
+                      input.control.control--boolean(type='radio', name='color', value='#000', disabled)
+                      span Black
+                  li
+                    label
+                      input.control.control--boolean(type='radio', name='color', value='#336699', disabled, checked)
+                      span Purple
+
+        .prose__section
+          h2 Button Group Template
+          p A collection of buttons.
+          form(action='', method='post')
+            .field
+              .btn-group
+                button.btn(type='reset', value='') Clear
+                button.btn.btn--primary(type='submit', value='') Submit

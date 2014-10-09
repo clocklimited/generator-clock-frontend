@@ -1,0 +1,41 @@
+{
+  "name": "generator-clock-frontend",
+  "version": "0.1.0",
+  "description": "Yeoman generator for a basic Clock Jade Frontend",
+  "license": "New BSD",
+  "main": "app/index.js",
+  "repository": "clocklimited/generator-clock-frontend",
+  "author": {
+    "name": "Paul Serby",
+    "email": "paul.serby@clock.co.uk",
+    "url": "https://github.com/serby"
+  },
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "chalk": "^0.4.0",
+    "configury": "^0.2.0",
+    "slugg": "^0.1.2",
+    "yeoman-generator": "^0.17.0",
+    "yosay": "^0.1.0"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "peerDependencies": {
+    "yo": ">=1.0.0"
+  }
+}

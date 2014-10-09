@@ -1,0 +1,61 @@
+//
+// MAIN HEADER
+// ===========
+//
+
+.main-header
+  background $color--blue
+  font-size rem(15)
+  line-height 1
+  text-transform uppercase
+  clearfix()
+
+  a
+    padding rem(25) rem(10)
+    font-weight 500
+    color $color--white
+
+  +width-min($mq--tablet--landscape)
+    padding rem(15) 0
+
+    a
+      padding rem(10)
+      letter-spacing tracking(100)
+
+  +width-min($mq--desktop)
+    font-size rem(16)
+    padding rem(35) 0
+
+.main-header__container
+  padding 0
+
+.site-title
+  float left
+  display inline-block
+  text-decoration none
+
+
+//
+// Mobile nav button
+//
+
+.btn--nav
+  height 65px
+  border-left 1px solid $color--aqua
+  float right
+  padding 0 rem(14)
+  transition all 0.4s ease-out
+
+  +width-min($mq--tablet--landscape)
+    display none
+
+  .no-js &
+    display none
+
+  .nav-open &
+  &:hover
+    background-color $color--aqua
+    transition-duration 0.1s
+    .icon
+      transition-duration 0.1s
+      background-color $color--blue

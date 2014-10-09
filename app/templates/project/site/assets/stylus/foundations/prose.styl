@@ -1,0 +1,84 @@
+//
+// PROSE
+// =====
+// Used to contain content entered by the client
+//
+
+.prose
+
+  +width-min($mq--tablet)
+    max-width rem(620)
+    margin 0 auto
+
+  +width-min($mq--desktop)
+    margin 0
+    max-width rem(790)
+
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6
+    text-align left
+    margin-bottom rem(25)
+
+  ul
+    li
+      margin-left 0
+      padding-left 35px
+      list-style none
+
+      &:before
+        /* For a round bullet */
+        content '\2022'
+        color $color--aqua
+        display block
+        position relative
+        max-width 0px
+        max-height 0px
+        left -35px
+        top 0
+
+  ol
+    counter-reset ol-counter
+
+    li
+      margin-left 0
+      padding-left 35px
+      list-style none
+      counter-increment ol-counter
+
+      &:before
+        content counter(ol-counter)
+        display block
+        color $color--aqua
+        position relative
+        max-width 0px
+        max-height 0px
+        left -35px
+
+.prose--narrow
+  max-width rem(400)
+
+.prose--page-centered
+  margin 0 auto
+
+.prose--text-centered
+  text-align center
+
++width-range($mq--tablet, $mq--desktop - 1)
+  .prose--text-centered--tablet
+    text-align center
+
+.prose__section
+  & + &
+    padding-top rem(20)
+    +width-min($mq--tablet)
+      padding-top rem(50)
+
+
+
+.text-centering
+  max-width rem(590)
+  margin 0 auto
+  text-align center
+
+.text-centering--wide
+  max-width rem(690)

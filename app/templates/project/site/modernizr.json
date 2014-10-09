@@ -1,0 +1,11 @@
+{
+  "classPrefix": "",
+  "options": [
+    "setClasses",
+    "testProp"
+  ],
+  "feature-detects": [
+    "test/svg",
+    "test/forms/fileinput"
+  ]
+}

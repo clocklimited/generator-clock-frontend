@@ -1,0 +1,23 @@
+//
+// STRUCTURAL STYLES
+// =================
+// Blocks of code which generically lay out blocks of content.
+// Avoid adding site specific styles in here.
+//
+// 1. Centering
+//
+
+
+//
+// 1. CONTAINER
+// Used to center content within the page
+//
+
+.container
+  margin 0 auto
+  max-width rem(1200)
+  padding 0 rem(10)
+  clearfix()
+
+  +width-min($mq--tablet)
+    padding 0 rem(15)

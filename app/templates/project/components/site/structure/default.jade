@@ -1,0 +1,37 @@
+doctype
+html.no-js(lang='en')
+  head
+    include includes/document-head
+
+  body
+
+    //- Ensure correct properties are set for ALL environments before uncommenting.
+    //- include includes/google-analytics
+
+    block body-start
+
+    block a11y-navigation
+      include layout/a11y-navigation
+
+      block main-header
+        include layout/main-header
+
+      main#content.main-content(role='main')
+        .section.section--header
+          .container
+            block page-header
+
+        block content
+
+      block main-footer
+        include layout/main-footer
+
+    block body-end
+
+    //- Scripts
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
+    script.
+      window.jQuery || document.write('<script src="/assets/js/lib/vendor/jquery-1.11.0.min.js"><\/script>')
+
+    block scripts
+      script(src=versionPath('/assets/js/build/index.js'))

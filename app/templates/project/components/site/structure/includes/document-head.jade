@@ -1,0 +1,89 @@
+//-
+//- STANDARD META TAGS
+//-
+
+meta(charset='utf-8')
+meta(name='viewport', content='initial-scale=1.0, maximum-scale=2.0')
+
+//- Project Specific
+//- if config.metaCreator && config.metaCreator != ''
+//-   meta(name='creator', content=config.metaCreator)
+//- if config.metaPublisher && config.metaPublisher != ''
+//-   meta(name='publisher', content=config.metaPublisher)
+
+//- Page Specific
+block metaAuthor
+  if config.metaAuthor && config.metaAuthor != ''
+    meta(name='author', content=config.metaAuthor)
+block metaDescription
+  if config.metaDescription && config.metaDescription != ''
+    meta(name='description', content=config.metaDescription)
+block metaKeywords
+  if config.metaKeywords && config.metaKeywords != ''
+    meta(name='keywords', content=config.metaKeywords)
+
+
+//-
+//- PAGE TITLE
+//-
+
+block title
+  title #{config.browserTitle} – #{config.browserStrapline}
+
+
+//-
+//- CSS
+//- Conditional comments to load a completely separate file for IE8
+//-
+
+<!--[if gt IE 8]><!-->
+link(rel='stylesheet', href=versionPath('/assets/css/index.css'))
+<!--<![endif]-->
+<!--[if lte IE 8]>
+link(rel='stylesheet', href=versionPath('/assets/css/index-ie8.css'))
+<![endif]-->
+
+
+//-
+//- JAVASCRIPT - HEAD SPECIFIC
+//-
+
+block headScripts
+  script(src=versionPath('/assets/js/lib/vendor/Modernizr.js'))
+  <!--[if lte IE 8]>
+  script(src=versionPath('/assets/js/lib/vendor/html5shiv.js'))
+  <![endif]-->
+
+  script(src='//use.typekit.net/bed8eql.js')
+  script.
+    try{Typekit.load();}catch(e){}
+
+
+//-
+//- ICONS / IMAGES / DEVICE SPECIFICS
+//-
+
+link(rel='shortcut icon', href=versionPath('/assets/images/meta/favicon.ico'))
+
+
+//-
+//- iOS App Icons / Title
+//-
+
+meta(name='apple-mobile-web-app-title', content=config.iosProjectTitle)
+link(rel='apple-touch-icon-precomposed', href=versionPath('/assets/images/meta/apple-touch-icon-precomposed-57x57.png'),   sizes='57x57')
+link(rel='apple-touch-icon-precomposed', href=versionPath('/assets/images/meta/apple-touch-icon-precomposed-114x114.png'), sizes='114x114')
+link(rel='apple-touch-icon-precomposed', href=versionPath('/assets/images/meta/apple-touch-icon-precomposed-120x120.png'), sizes='120x120')
+link(rel='apple-touch-icon-precomposed', href=versionPath('/assets/images/meta/apple-touch-icon-precomposed-72x72.png'),   sizes='72x72')
+link(rel='apple-touch-icon-precomposed', href=versionPath('/assets/images/meta/apple-touch-icon-precomposed-76x76.png'),   sizes='76x76')
+link(rel='apple-touch-icon-precomposed', href=versionPath('/assets/images/meta/apple-touch-icon-precomposed-144x144.png'), sizes='144x144')
+link(rel='apple-touch-icon-precomposed', href=versionPath('/assets/images/meta/apple-touch-icon-precomposed-152x152.png'), sizes='152x152')
+
+
+//-
+//- Microsoft Pinned Tile
+//-
+
+meta(name='application-name', content=config.msTileProjectTitle)
+meta(name='msapplication-TileImage', content=versionPath('/assets/images/meta/microsoft-pinned-tile-image-144x144.png'))
+meta(name='msapplication-TileColor', content=config.msTileBackground)

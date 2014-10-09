@@ -1,0 +1,9 @@
+[ { "route": "/"
+  , "template": "index"
+  , "data": {}
+  }
+, { "route": "/terms-and-conditions"
+  , "template": "terms"
+  , "data": {}
+  }
+]

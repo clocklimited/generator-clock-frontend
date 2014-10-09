@@ -1,0 +1,68 @@
+//
+// MAIN NAVIGATION
+// ===============
+//
+
+.main-navigation
+  clear both
+  transition height 0.3s ease
+
+  .js &
+    // display none
+    height 0
+    overflow hidden
+  .nav-open &
+    display block
+    height rem(132)
+
+  +width-min($mq--tablet--landscape)
+    .js &
+      display block
+      height auto
+
+  a
+    display block
+    text-decoration none
+    background-color $color--aqua
+    color $color--blue
+
+    &:hover
+    &:focus
+      background-color $color--white
+      color $color--blue
+
+  li
+    border-bottom 1px solid $color--blue
+
+  +width-min($mq--tablet--landscape)
+    float right
+    clear none
+
+    a
+      background-color transparent
+      color $color--white
+
+      &:hover
+      &:focus
+        color $color--white
+        text-decoration underline
+        background-color transparent
+
+    li
+      border-bottom 0
+      display inline-block
+      position relative
+
+      & + li
+        padding-left 3px
+
+        &:before
+          border-left 3px solid $color--teal
+          bottom 0
+          content ''
+          left 0
+          position absolute
+          top 0
+
+    ul
+      text-align right

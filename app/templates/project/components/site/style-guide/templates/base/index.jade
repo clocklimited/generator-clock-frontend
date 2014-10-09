@@ -1,0 +1,15 @@
+extend ../../../structure/default
+
+block page-header
+
+  h1.section__title Style Guide
+
+block content
+  .section
+    .container
+      .prose
+
+        h2 Style Guide
+        ul
+          each guide, key in guides
+            li: a(href='/style-guide/#{key}') #{guide}

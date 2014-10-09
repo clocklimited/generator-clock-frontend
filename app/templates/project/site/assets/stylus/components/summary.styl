@@ -1,0 +1,41 @@
+//
+// SUMMARY
+// =======
+//
+
+.summary
+  margin-bottom rem(30)
+  clear left
+
+.summary__image
+  margin-bottom rem(10)
+
+  +width-min($mq--tablet)
+    float left
+    margin-top rem(3)
+    margin-right rem(20)
+
+  +width-min($mq--desktop)
+    margin-left rem(-100)
+
+.summary__meta
+  font-size rem(16)
+  color $color--teal
+
+.summary__title
+  a
+    text-decoration none
+    &:after
+      content ''
+      display inline-block
+      width 13px
+      height 13px
+      margin-left rem(8)
+      background-position 0 0
+      background-repeat no-repeat
+      background-image versionPath('/assets/images/content/outbound-link-icon.png')
+      .svg &
+        background-image versionPath('/assets/images/content/outbound-link-icon.svg')
+    &:hover
+      &:after
+        background-position 0 -15px

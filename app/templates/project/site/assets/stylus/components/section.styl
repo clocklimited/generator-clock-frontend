@@ -1,0 +1,78 @@
+//
+// SECTION
+// =======
+//
+
+.section
+  padding rem(40) 0
+  +width-min($mq--desktop)
+    padding rem(70) 0
+
+.section--header
+  background $color--teal
+  color $color--white
+  font-size rem(17)
+  text-align center
+  font-weight 300
+
+  +width-min($mq--tablet)
+    font-size rem(18)
+
+  +width-min($mq--desktop)
+    font-size rem(24)
+
+  .container
+    max-width rem(850)
+
+  h1
+    color inherit
+
+  cite
+    font-size rem(15)
+    +width-min($mq--desktop)
+      font-size rem(18)
+
+.section--body
+  background $color--white
+  color $color--black
+
+  a
+    color inherit
+
+
+.section--secondary
+  background $color--aqua
+  color $color--black
+  font-size rem(16)
+
+
+.section__title__lead
+  margin-bottom rem(30)
+  underline(80, 20)
+  +width-min($mq--tablet)
+    underline(180, 20)
+
+.section__title
+  font-size rem(21)
+  margin-bottom rem(30)
+  text-align center
+  font-weight 500
+  text-transform uppercase
+  letter-spacing tracking(100)
+  underline(80, 10)
+
+  +width-min($mq--tablet)
+    font-size rem(18)
+
+  +width-min($mq--desktop)
+    margin-bottom rem(40)
+
+.section__title--alt
+  &:after
+    border-color $color--white
+
+.section__title--alt--desktop
+  &:after
+    border-color $color--white
+    +width-min($mq--desktop)
+      border-color $color--aqua

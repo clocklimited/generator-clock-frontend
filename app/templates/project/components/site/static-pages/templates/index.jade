@@ -1,0 +1,29 @@
+extend ../../structure/default
+
+block page-header
+
+  h1.section__title__lead #{config.projectTitle}
+  p #{config.projectDescription}
+  a.btn(href='/') This is a button link
+
+block content
+  .section
+    .container
+
+      .grid.grid--desktop-wide
+        .grid__item.tablet-one-half
+          h2.section__title List of Summary Items
+          .summary-list
+          
+
+        .grid__item.tablet-one-half
+          h2.section__title Another List of Summary
+          .summary-list
+
+  .section.section--secondary
+    .container
+
+      h2.section__title.section__title--alt This here is secondary content
+
+      .text-centering
+        p Secondary content body copy goes here

@@ -1,0 +1,206 @@
+//
+// TYPOGRAPHIC STYLES
+// ==================
+// Base typography styles
+//
+// Layout styles for typographic elements should live in base.styl
+// Form and Table styles live in their respective stylesheets
+//
+
+
+//
+// SELECTED TEXT
+//
+
+::-moz-selection
+  color $color--white
+  background $color--primary
+  text-shadow none
+::selection
+  color $color--white
+  background $color--primary
+  text-shadow none
+
+
+//
+// BASE STYLES
+//
+
+html
+  font-size $base--font-size
+  font-family $base--font-body
+  line-height $base--line-height
+  color $base--font-color
+  font-weight 400
+  text-rendering optimizeLegibility
+  -webkit-font-smoothing antialiased
+
+body
+  font-size 1em
+
+  +width-min($mq--tablet)
+    font-size rem(18)
+
+
+//
+// HEADINGS
+// Uses a Double-stranded heading hierarchy to preserve the document outline.
+// http://csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/
+//
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6
+  color $color--blue
+  font-family $base--font-heading
+  font-weight 300
+  line-height 1
+  margin-bottom rem(20)
+  letter-spacing tracking(20)
+
+  a
+    color inherit
+
+h1, .h1
+  font-size rem(25)
+  margin-bottom rem(45)
+  letter-spacing 0
+h2, .h2
+  font-size rem(21)
+h3, .h3
+  font-size rem(17)
+h4, .h4
+  font-size rem(17)
+  font-weight 500
+h5, .h5
+h6, .h6
+  font-weight 500
+  font-size rem(16)
+
++width-min($mq--tablet)
+  h1, .h1
+  h2, .h2
+    font-size rem(36)
+  h3, .h3
+    font-size rem(28)
+  h4, .h4
+    font-size rem(21)
+    letter-spacing tracking(10)
+  h5, .h5
+  h6, .h6
+    letter-spacing 0
+    font-size rem(18)
+
++width-min($mq--desktop)
+  h1, .h1
+    font-size rem(72)
+  h3, .h3
+    font-size rem(28)
+
+//
+// LINKS & BUTTONS
+//
+
+a
+  color $color--black
+  text-decoration underline
+  transition color 0.4s ease-out
+
+  &:hover
+  &:focus
+    color $color--teal
+    transition-duration 0.1s
+    outline 0
+
+  &[href^=mailto]
+  &[href^=tel]
+    text-decoration none
+
+button
+  cursor pointer
+  font-family inherit
+
+
+//
+// EMPHASIS
+//
+
+blockquote, q, em, dfn, i, cite, var
+  font-style italic
+
+th, strong, dt, b
+  font-weight bold
+
+
+//
+// QUOTES
+//
+
+blockquote p:before, blockquote p:after, q:before, q:after
+  content ''
+
+blockquote
+  font-size 1.125em
+
+  p
+    margin-bottom 0
+
+
+//
+// TEXT MARKING
+//
+
+ins
+  text-decoration none
+  border-bottom 3px double
+
+del, s
+  text-decoration line-through
+
+u
+  text-decoration underline
+
+mark
+  background-color lighten($color--notice, 40%)
+  color $color--black
+  margin-left -2px
+  margin-right -2px
+  padding-left 2px
+  padding-right 2px
+
+
+//
+// PRE-FORMATTED TEXT / CODE BLOCKS
+//
+
+pre
+code
+  font-family 'Monaco', monospace
+
+
+//
+// MISC PRESONTATIONAL ELEMENTS
+//
+
+address
+  font-style normal
+
+abbr
+  border-bottom 1px dotted
+
+// In HTML5, the `<small>` element represents legal text or small-print, rather
+// than dictating a font size.
+small
+  font-size inherit
+
+sub,
+sup
+  position relative
+  font-size 0.75em
+  line-height 0
+  vertical-align baseline
+
+sup
+  top -0.5em
+
+sub
+  bottom -0.25em
