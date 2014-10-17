@@ -6,16 +6,6 @@ var fs = require('fs')
   , anyNewerFiles = require('any-newer-files')
   , join = require('path').join
 
-function getSiteList() {
-  return fs.readdirSync(__dirname + '/../../configs')
-    .filter(function (file) {
-      return file.indexOf('.') !== 0 && file !== 'base.json'
-    })
-    .map(function (file) {
-      return file.replace('.json', '')
-    })
-}
-
 function task(pliers) {
 
   pliers('buildMainAppJs', function (done) {
