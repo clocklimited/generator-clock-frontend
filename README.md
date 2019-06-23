@@ -1,4 +1,4 @@
-# generator-clock-frontend [![Build Status](https://secure.travis-ci.org/clocklimited/generator-clock-frontend.png?branch=master)](https://travis-ci.org/clocklimited/generator-clock-frontend)
+# generator-clock-frontend [![Build Status](https://secure.travis-ci.org/clocklimited/generator-clock-frontend.png?branch=master)](https://travis-ci.org/clocklimited/generator-clock-frontend) [![Greenkeeper badge](https://badges.greenkeeper.io/clocklimited/generator-clock-frontend.svg)](https://greenkeeper.io/)
 
 ## Getting Started
 
