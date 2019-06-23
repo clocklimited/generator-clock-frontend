@@ -26,12 +26,12 @@
     "yeoman-generator"
   ],
   "dependencies": {
-    "chalk": "^0.4.0",
-    "configury": "^0.2.0",
-    "slugg": "^0.1.2",
-    "yeoman-generator": "^0.17.0",
-    "yosay": "^0.1.0",
-    "async": "^0.9.0"
+    "chalk": "^2.4.2",
+    "configury": "^0.3.0",
+    "slugg": "^1.2.1",
+    "yeoman-generator": "^4.0.1",
+    "yosay": "^2.0.2",
+    "async": "^3.1.0"
   },
   "devDependencies": {
     "mocha": "*"
